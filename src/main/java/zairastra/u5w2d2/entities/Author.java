@@ -28,6 +28,6 @@ public class Author {
         this.surname = surname;
         this.email = email;
         this.birthDate = birthDate;
-        this.avatar = avatar;
+        this.avatar = "https://ui-avatars.com/api/?name=" + name + "+" + surname;
     }
 }

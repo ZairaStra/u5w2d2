@@ -60,7 +60,7 @@ public class BlogsService {
 
     //5.salva
     public Blog saveBlog(NewBlogPayload payload) {
-        Blog newBlog = new Blog(payload.getCategory(), payload.getTitle(), "https://www.google.com/url?q=https://picsum.photos/200/300&sa=D&source=editors&ust=1753188494833917&usg=AOvVaw06_hLSXHPjEjX_xgy3unYE", payload.getContent(), payload.getReadingTime());
+        Blog newBlog = new Blog(payload.getCategory(), payload.getTitle(), payload.getContent(), payload.getReadingTime());
         this.blogsFakeDatabase.add(newBlog);
 
         log.info("The blog " + payload.getTitle() + " has been saved");

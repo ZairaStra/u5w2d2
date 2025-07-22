@@ -45,7 +45,7 @@ public class AuthorsService {
 
 
     //4.cerca per id e cancella - VOID
-    public void findAuthorgByIdAndDelete(int authorId) {
+    public void findAuthorByIdAndDelete(int authorId) {
         Author found = findAuthorById(authorId);
 
         if (found == null) throw new NotFoundException(authorId);
@@ -54,7 +54,7 @@ public class AuthorsService {
 
 
     //5.salva
-    public Author saveAUìuthor(NewAuthorPayload payload) {
+    public Author saveAuthor(NewAuthorPayload payload) {
         Author newAuthor = new Author(payload.getName(), payload.getSurname(), payload.getEmail(), payload.getBirthDate());
         this.authorsFakeDatabase.add(newAuthor);
 
