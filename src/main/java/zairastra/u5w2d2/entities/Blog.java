@@ -23,7 +23,7 @@ public class Blog {
     public Blog(String category, String title, String cover, String content, double readingTime) {
         //non essendoci db uso Random
         Random rndm = new Random();
-        this.id = rndm.nextInt();
+        this.id = rndm.nextInt(1, 100);
         this.category = category;
         this.title = title;
         this.cover = cover;
